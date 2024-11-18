@@ -1,0 +1,104 @@
+# cspell:words ArcaneSavant termux
+
+name: Bug Report
+description: Create a report to help us improve.
+title: "[Bug]: "
+labels:
+  - bug
+assignees:
+  - ArcaneSavant
+body:
+  - type: checkboxes
+    id: issue-tracker
+    attributes:
+      label: Issue Tracker
+      description: >
+        Please search to see if an issue already exists for the bug you
+        encountered.
+      options:
+        - label: I have searched the existing issues.
+          required: true
+  - type: textarea
+    id: bugs-description
+    attributes:
+      label: Bug's Description
+      description: >
+        A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps To Reproduce
+      description: >
+        Describe how one can reproduce the issue. Please use an ordered list.
+      value: |
+        1. Install Termux from F-Droid, GitHub, or Google Play
+        2. Open a terminal inside Termux
+        3. Run the Termux Appearance installation command in the terminal
+        4. Grant storage permission if asked
+        5. ...
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: >
+        A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: relevant-logs
+    attributes:
+      label: Relevant Logs
+      description: >
+        Paste any relevant logs within the box below.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: >
+        If applicable, add screenshots to help explain your problem.
+      placeholder: >
+        Click to Highlight, then Drag and Drop Files Here to Upload
+  - type: input
+    id: android-version
+    attributes:
+      label: Android Version
+      placeholder: Android 12
+    validations:
+      required: true
+  - type: input
+    id: termux-version
+    attributes:
+      label: Termux Version
+      placeholder: >
+        0.118.0
+    validations:
+      required: true
+  - type: dropdown
+    id: termux-release-channel
+    attributes:
+      label: Termux Release Channel
+      options:
+        - F-Droid
+        - GitHub
+        - Google Play
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: >
+        Add any other context about the problem here.
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Thanks for taking the time to fill out this form!
